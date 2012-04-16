@@ -425,8 +425,8 @@ class CP_Helper
         {
             wp_enqueue_script('jquery-ui-datepicker');
             wp_enqueue_script('jquery-ui-slider');
-            wp_enqueue_script('cp-helper', get_template_directory_uri().'/lib/custom_post_helper/cp_helper/js/cp-helper.js');
-            wp_enqueue_style('jquery-ui-custom', get_template_directory_uri().'/lib/custom_post_helper/cp_helper/css/jquery-ui-custom.css');
+            wp_enqueue_script('cp-helper', get_template_directory_uri().'/js/cp-helper.js');
+            wp_enqueue_style('jquery-ui-custom', get_template_directory_uri().'/css/jquery-ui-custom.css');
         }
 
         public function add_custom_scripts() 
