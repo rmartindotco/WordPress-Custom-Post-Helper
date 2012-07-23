@@ -482,14 +482,13 @@ class CP_Helper
 
             if( $last == 'y' && in_array($nextlast, $vowel) )
 			{
-				$cut = substr( $string, 0, -1 );
-                //convert vowel + y to s
+                // just attach an s
                 $plural = $cut . 's';
 			}
 			elseif( $last == 'y' )
 			{
 				$cut = substr( $string, 0, -1 );
-                //convert consonant + y to ies
+                // convert consonant + y to ies
                 $plural = $cut . 'ies';
 			}
             else
