@@ -476,14 +476,22 @@ class CP_Helper
         }
         public static function pluralize( $string )
         {
-            $last = $string[strlen( $string ) - 1];
+            $last = substr($string, -1);
+			$nextlast = substr($string, -2, 1);
+			$vowel = array('a', 'e', 'i', 'o', 'u');
 
-            if( $last == 'y' )
-            {
-                $cut = substr( $string, 0, -1 );
-                //convert y to ies
+            if( $last == 'y' && in_array($nextlast, $vowel) )
+			{
+				$cut = substr( $string, 0, -1 );
+                //convert vowel + y to s
+                $plural = $cut . 's';
+			}
+			elseif( $last == 'y' )
+			{
+				$cut = substr( $string, 0, -1 );
+                //convert consonant + y to ies
                 $plural = $cut . 'ies';
-            }
+			}
             else
             {
                 // just attach an s
